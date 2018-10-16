@@ -1,0 +1,44 @@
+
+#include <stdio.h>
+
+int
+main ()
+{
+//Reverse an Array and print its contents 
+
+// Initialize Array
+#define LENGTH 10
+  int array[LENGTH];
+  int temp, index, j;
+
+  for (int i = 0; i < LENGTH; i++)
+    {
+      array[i] = i + 1;
+    }
+
+// Print initial array 
+  printf ("Initial array: ");
+  for (int i = 0; i < LENGTH; i++)
+    {
+      printf ("%d ", array[i]);
+    }
+  printf ("\n");
+
+// Reverse Array
+  for (int i = 0; i < LENGTH / 2; i++)
+    {
+      index = LENGTH - i - 1;
+      temp = array[i];
+      array[i] = array[index];
+      array[index] = temp;
+    }
+
+// Print final array 
+  printf ("Final array: ");
+  for (int i = 0; i < LENGTH; i++)
+    {
+      printf ("%d ", array[i]);
+    }
+  printf ("\n");
+
+}
